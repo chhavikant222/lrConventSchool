@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>L. R. Convent School, 9 ML</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .hero {
+        background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200') center/cover no-repeat;
+        height: 85vh;
+        color: white;
+        display: flex;
+        align-items: center;
+      }
+      .section-title {
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .navbar-brand span {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .hero-img {
+        height: 85vh;
+        object-fit: cover;
+      }
+      .carousel-caption {
+        right: 5%;
+        left: auto;
+        bottom: 10%;
+        text-align: right;
+        background: rgba(0, 0, 0, 0.55);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .carousel-caption h2,
+      .carousel-caption p {
+        color: #fff;
+      }
+
+      .step-icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      .school-card {
+        transition: all 0.3s ease;
+      }
+
+      .school-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .fee-dropdown .dropdown-item {
+        font-size: 14px;
+        padding: 10px 15px;
+      }
+      .gallery-img {
+  width: 100%;
+  height: 200px;        /* fixed height (change if needed) */
+  object-fit: cover;    /* crop image without distortion */
+  border-radius: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow p-0">
+    <div class="container-fluid">
+
+        <!-- Logo + School Name -->
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+            <img src="public/uploads/WhatsApp Image 2025-12-12 at 5.51.50 PM.jpeg"
+                 alt="LR School Logo"
+                 width="70"
+                 height="70"
+                 class="me-2 rounded-circle border border-light">
+            <span class="fs-5">L. R. Convent School, 9 ML</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler border-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold px-3 active" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold px-3 active" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold px-3 active" href="#academics">Academics</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold px-3 active" href="#admissions">Admissions</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold px-3 active" href="#gallery">Gallery</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold px-3 active" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Hero Carousel -->
+<section id="home">
+    <div id="heroCarousel" 
+     class="carousel slide carousel-fade" 
+     data-bs-ride="carousel" 
+     data-bs-interval="3000"
+     data-bs-pause="false">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <img src="public/uploads/yoga.jpeg" class="d-block w-100 hero-img" alt="School Campus">
+            <div class="carousel-caption text-end">
+                <h2 class="fw-bold">Welcome to L. R. Convent School</h2>
+                <p>Where education meets values</p>
+                <a href="#admissions" class="btn btn-warning btn-sm">Apply Now</a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <img src="public/uploads/dance.JPG" class="d-block w-100 hero-img" alt="Classroom">
+            <div class="carousel-caption text-end">
+                <h2 class="fw-bold">Quality Education</h2>
+                <p>Building bright futures</p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <!-- <div class="carousel-item">
+            <img src="public/uploads/banner_logo.png" class="d-block w-100 hero-img" alt="Students Activity">
+            <div class="carousel-caption text-end">
+                <h2 class="fw-bold">Holistic Development</h2>
+                <p>Learning beyond classrooms</p>
+            </div>
+        </div> -->
+        <div class="carousel-item">
+    <img src="public/uploads/banner_logo.png" class="d-block w-100 hero-img" alt="Students Activity">
+    <div class="carousel-caption text-end">
+        <h2 class="fw-bold">Holistic Development</h2>
+        <p>Learning beyond classrooms</p>
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+</section>
+
+
+<!-- About -->
+<section id="about" class="py-5 position-relative" style="background: linear-gradient(135deg, #f8fbff, #eef3ff);">
+<div class="container">
+<h2 class="section-title text-center text-primary fw-bold mb-4">About Us</h2>
+<p class="lead text-center mx-auto" style="max-width: 800px;">
+<strong>L. R. Convent School, 9 ML</strong> is committed to nurturing young minds through
+quality education blended with discipline, creativity, and strong moral values.
+We believe in the <span class="text-primary fw-semibold">all-round development</span> of every child.
+</p>
+
+
+<div class="row mt-5 align-items-center">
+<!-- Features -->
+<div class="col-md-6 mb-4">
+<ul class="list-group list-group-flush shadow-lg rounded-4 overflow-hidden">
+<li class="list-group-item py-3"><i class="bi bi-mortarboard-fill text-primary me-2"></i> Nursery to 1st AC Classes</li>
+<li class="list-group-item py-3"><i class="bi bi-mortarboard-fill text-primary me-2"></i> Smart Class Facility Available</li>
+<li class="list-group-item py-3"><i class="bi bi-person-check-fill text-primary me-2"></i> Highly Qualified & Dedicated Teachers</li>
+<li class="list-group-item py-3"><i class="bi bi-trophy-fill text-primary me-2"></i> Sports & Co-Curricular Activities</li>
+<li class="list-group-item py-3"><i class="bi bi-shield-lock-fill text-primary me-2"></i> Safe, Secure & Disciplined Campus</li>
+<li class="list-group-item py-3"><i class="bi bi-bus-front-fill text-primary me-2"></i> Transportation Facility Available</li>
+</ul>
+</div>
+
+
+<!-- Principal Message -->
+<div class="col-md-6 mb-4">
+<div class="principal-card text-white shadow-lg rounded-4 p-5 position-relative"
+style="background: url('public/uploads/library.avif') center/cover no-repeat;">
+<div class="overlay position-absolute top-0 start-0 w-100 h-100 rounded-4"
+style="background: rgba(0, 0, 0, 0.6);"></div>
+
+
+<div class="position-relative">
+<i class="bi bi-quote fs-1 text-warning"></i>
+<p class="fs-5 fst-italic mt-3">
+Our mission is to create a joyful learning environment where students grow
+academically, morally, and socially, becoming confident citizens of tomorrow.
+</p>
+<hr class="border-light opacity-75" />
+<p class="fw-bold mb-0">— Mr. S. N. Verma</p>
+<small class="text-warning"><b>Principal</b></small>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Academics -->
+<section id="academics" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center text-primary fw-bold mb-4">Academics</h2>
+
+    <div class="row g-4">
+      <!-- Primary Wing -->
+      <!-- <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0 rounded-4 text-center">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Pre primary Wing</h5>
+            <p class="small text-muted">Strong foundation learning</p>
+
+            <select class="form-select mt-3">
+              <option selected>Classes Offered</option>
+              <option>Nursery – ₹16,000 / Year</option>
+              <option>LKG – ₹17,000 / Year</option>
+              <option>UKG – ₹18,000 / Year</option>
+            </select>
+          </div>
+        </div>
+      </div> -->
+<div class="col-md-3">
+  <div class="card h-100 shadow-sm border-0 rounded-4 text-center school-card">
+    <div class="card-body p-4">
+
+      <h5 class="card-title text-primary fw-bold">
+        Pre-Primary Wing
+      </h5>
+
+      <p class="text-muted small mb-3">
+        Building a strong foundation through joyful learning
+      </p>
+
+      <!-- Fake Dropdown -->
+      <div class="dropdown fee-dropdown">
+        <button class="btn btn-light w-100 dropdown-toggle text-start"
+                type="button" data-bs-toggle="dropdown">
+          Fee Structure (Academic Year)
+        </button>
+
+        <ul class="dropdown-menu w-100 mt-2 fee-dropdown">
+  <li class="dropdown-item d-flex justify-content-between">
+    <span>Nursery</span>
+    <span class="fw-semibold">₹16,000 / Year</span>
+  </li>
+  <li class="dropdown-item d-flex justify-content-between">
+    <span>LKG</span>
+    <span class="fw-semibold">₹17,000 / Year</span>
+  </li>
+  <li class="dropdown-item d-flex justify-content-between">
+    <span>UKG</span>
+    <span class="fw-semibold">₹18,000 / Year</span>
+  </li>
+</ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+      <!-- Middle Wing -->
+      <!-- <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0 rounded-4 text-center">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Primary Wing</h5>
+            <p class="small text-muted">Skill-based subjects</p>
+
+            <select class="form-select mt-3">
+              <option selected>Classes Offered</option>
+              <option>Class 1st – ₹19,000 / Year</option>
+              <option>Class 2nd – ₹20,000 / Year</option>
+              <option>Class 3rd – ₹21,000 / Year</option>
+              <option>Class 4th – ₹22,000 / Year</option>
+              <option>Class 5th – ₹23,000 / Year</option>
+            </select>
+          </div>
+        </div>
+      </div> -->
+      <div class="col-md-3">
+  <div class="card h-100 shadow-sm border-0 rounded-4 text-center school-card">
+    <div class="card-body p-4">
+
+      <h5 class="card-title text-primary fw-bold">
+        Primary Wing
+      </h5>
+
+      <p class="text-muted small mb-3">
+        Skill-based subjects
+      </p>
+
+      <!-- Fake Dropdown -->
+      <div class="dropdown fee-dropdown">
+        <button class="btn btn-light w-100 dropdown-toggle text-start"
+                type="button" data-bs-toggle="dropdown">
+          Fee Structure (Academic Year)
+        </button>
+
+        <ul class="dropdown-menu w-100 mt-2 fee-dropdown">
+  <li class="dropdown-item d-flex justify-content-between">
+    <span>Class 1st</span>
+    <span class="fw-semibold">₹19,000 / Year</span>
+  </li>
+  <li class="dropdown-item d-flex justify-content-between">
+    <span>Class 2nd</span>
+    <span class="fw-semibold">₹20,000 / Year</span>
+  </li>
+  <li class="dropdown-item d-flex justify-content-between">
+    <span>Class 3rd</span>
+    <span class="fw-semibold">₹21,000 / Year</span>
+  </li>
+    <li class="dropdown-item d-flex justify-content-between">
+    <span>Class 4th</span>
+    <span class="fw-semibold">₹22,000 / Year</span>
+  </li>
+    <li class="dropdown-item d-flex justify-content-between">
+    <span>Class 5th</span>
+    <span class="fw-semibold">₹23,000 / Year</span>
+  </li>
+</ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Senior Wing -->
+
+
+           <div class="col-md-3">
+  <div class="card h-100 shadow-sm border-0 rounded-4 text-center school-card">
+    <div class="card-body p-4">
+
+      <h5 class="card-title text-primary fw-bold">
+        Secondary Wing
+      </h5>
+
+      <p class="text-muted small mb-3">
+        Exam & career preparation
+      </p>
+
+      <!-- Fake Dropdown -->
+      <div class="dropdown fee-dropdown">
+        <button class="btn btn-light w-100 dropdown-toggle text-start"
+                type="button" data-bs-toggle="dropdown">
+          Fee Structure (Academic Year)
+        </button>
+
+        <ul class="dropdown-menu w-100 mt-2 fee-dropdown">
+  <li class="dropdown-item d-flex justify-content-between">
+    <span>Class 6th</span>
+    <span class="fw-semibold">₹24,000 / Year</span>
+  </li>
+  <li class="dropdown-item d-flex justify-content-between">
+    <span>Class 7th</span>
+    <span class="fw-semibold">₹25,000 / Year</span>
+  </li>
+  <li class="dropdown-item d-flex justify-content-between">
+    <span>Class 8th</span>
+    <span class="fw-semibold">₹26,000 / Year</span>
+  </li>
+    <li class="dropdown-item d-flex justify-content-between">
+    <span>Class 9th</span>
+    <span class="fw-semibold">₹27,000 / Year</span>
+  </li>
+    <li class="dropdown-item d-flex justify-content-between">
+    <span>Class 10th</span>
+    <span class="fw-semibold">₹29,000 / Year</span>
+  </li>
+</ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      <!-- Co-curricular -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0 rounded-4 text-center bg-primary text-white">
+          <div class="card-body">
+            <h5 class="card-title">Sports & Co-Curricular</h5>
+            <p class="small">Sports, arts & activities</p>
+
+            <select class="form-select mt-3">
+              <option selected>Applicable For</option>
+              <option>All Classes</option>
+            </select>
+
+            <div class="mt-3 p-2 bg-white text-primary rounded fw-bold">
+              Fees: ₹1000 (All Classes)
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Admissions -->
+<section id="admissions" class="py-5 "
+         style="background: linear-gradient(135deg, #eef3ff, #ffffff);">
+  <div class="container">
+    <h2 class="section-title text-center text-primary fw-bold mb-3">
+      Admissions Open
+    </h2>
+    <p class="text-center text-muted mb-5">
+      Begin your child’s journey towards quality education and strong values
+    </p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-lg border-0 rounded-4">
+          <div class="card-body p-4 p-md-5">
+
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="d-flex align-items-start">
+                  <div class="step-icon bg-primary text-white rounded-circle me-3">
+                    1
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Collect Admission Form</h6>
+                    <p class="small text-muted mb-0">
+                      Visit the school office to obtain the admission form.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex align-items-start">
+                  <div class="step-icon bg-primary text-white rounded-circle me-3">
+                    2
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Submit Documents</h6>
+                    <p class="small text-muted mb-0">
+                      Submit required documents and ID proof.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex align-items-start">
+                  <div class="step-icon bg-primary text-white rounded-circle me-3">
+                    3
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Entrance Test</h6>
+                    <p class="small text-muted mb-0">
+                      Entrance test will be conducted if required.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex align-items-start">
+                  <div class="step-icon bg-primary text-white rounded-circle me-3">
+                    4
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1">Fee Submission</h6>
+                    <p class="small text-muted mb-0">
+                      Complete admission by paying the registration fee.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-5">
+              <a href="#contact" class="btn btn-primary btn-lg px-5 rounded-pill shadow">
+                Contact for Admission
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Gallery -->
+<section id="gallery" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center text-primary fw-bold mb-4">Gallery</h2>
+
+    <!-- Visible Images -->
+    <div class="row g-3">
+      <div class="col-6 col-md-3">
+        <img src="public/uploads/prize.JPG" class="gallery-img img-fluid rounded shadow">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="public/uploads/holi.jpeg" class="gallery-img img-fluid rounded shadow">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="public/uploads/trip.jpeg" class="gallery-img img-fluid rounded shadow">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="public/uploads/fancy_dress.jpeg" class="gallery-img img-fluid rounded shadow">
+      </div>
+    </div>
+
+    <!-- Hidden Images -->
+    <div class="collapse mt-3" id="moreGallery">
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <img src="public/uploads/kids.JPG" class="gallery-img img-fluid rounded shadow">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="public/uploads/magic_show.jpeg" class="gallery-img img-fluid rounded shadow">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="public/uploads/ind.JPG" class="gallery-img img-fluid rounded shadow">
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="public/uploads/bhangra.JPG" class="gallery-img img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+
+    <!-- See More Button -->
+   <div class="text-center mt-4">
+  <button class="btn btn-outline-primary px-4 rounded-pill"
+          id="galleryToggleBtn"
+          data-bs-toggle="collapse"
+          data-bs-target="#moreGallery"
+          aria-expanded="false">
+    See More Photos
+  </button>
+</div>
+
+
+  </div>
+</section>
+<!-- Contact -->
+<section id="contact" class="py-5 position-relative" style="background: linear-gradient(135deg, #f0f8ff, #e6f2ff);">
+  <div class="container">
+    <h2 class="section-title text-center text-primary fw-bold mb-4">Contact Us</h2>
+
+    <div class="row g-4">
+      <!-- Contact Info -->
+      <div class="col-md-6">
+        <div class="p-4 shadow rounded-4 bg-white">
+          <h5 class="fw-bold mb-3">Get in Touch</h5>
+          <p><i class="bi bi-geo-alt-fill text-primary me-2"></i><strong>Address:</strong> Lathanwali, 9 ML</p>
+          <p><i class="bi bi-telephone-fill text-primary me-2"></i><strong>Phone:</strong> +91 9929297636</p>
+          <p><i class="bi bi-envelope-fill text-primary me-2"></i><strong>Email:</strong> lrchildrenss9ml@gmail.com</p>
+
+          <!-- Social Media -->
+          <div class="mt-4">
+            <h6 class="fw-bold mb-2">Follow Us:</h6>
+            <div class="d-flex flex-column gap-2">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-instagram fs-4 me-2" style="color:#E4405F;"></i>
+                <a href="https://www.instagram.com/lrchildrenss?igsh=eXN3cjd1MXVrM25n&utm_source=qr" class="text-decoration-none text-dark fw-semibold">@lrchildrenss</a>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-facebook fs-4 me-2" style="color:#1877F2;"></i>
+                <a href="#" class="text-decoration-none text-dark fw-semibold">L. R. Convent School</a>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-youtube fs-4 me-2" style="color:#FF0000;"></i>
+                <a href="https://youtube.com/@l.r.childrensikshansanstha6656?si=f2tMA34c13vw38Q0" class="text-decoration-none text-dark fw-semibold">LR Convent School</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <div class="p-4 shadow rounded-4 bg-white">
+          <h5 class="fw-bold mb-3">Send a Message</h5>
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control rounded-pill" placeholder="Full Name">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control rounded-pill" placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control rounded-3" rows="4" placeholder="Message"></textarea>
+            </div>
+            <button class="btn btn-primary w-100 rounded-pill shadow-sm">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white text-center py-3">
+    © 2025 L. R. Convent School, 9 ML — All Rights Reserved
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const galleryBtn = document.getElementById('galleryToggleBtn');
+  const galleryCollapse = document.getElementById('moreGallery');
+
+  galleryCollapse.addEventListener('shown.bs.collapse', function () {
+    galleryBtn.textContent = 'See Less Photos';
+  });
+
+  galleryCollapse.addEventListener('hidden.bs.collapse', function () {
+    galleryBtn.textContent = 'See More Photos';
+  });
+</script>
+
+</body>
+</html>
