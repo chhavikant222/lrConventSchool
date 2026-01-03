@@ -71,22 +71,114 @@
         padding: 10px 15px;
       }
       .gallery-img {
-  width: 100%;
-  height: 200px;        /* fixed height (change if needed) */
-  object-fit: cover;    /* crop image without distortion */
-  border-radius: 10px;
+        width: 100%;
+        height: 200px;        /* fixed height (change if needed) */
+        object-fit: cover;    /* crop image without distortion */
+        border-radius: 10px;
+      }
+
+      /* Desktop */
+/* .school-logo {
+    width: 70px;
+    height: 70px;
+} */
+/* Default (Desktop – untouched) */
+.school-logo {
+    width: 70px;
+    height: 70px;
 }
+
+.school-name {
+    font-size: 1.25rem;
+    white-space: nowrap;
+}
+
+/* Small mobile: 350px – 576px */
+@media (max-width: 576px) {
+    .school-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .school-name {
+        font-size: 0.9rem;
+        line-height: 1.2;
+        max-width: 200px;
+        white-space: normal;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+        font-size: 15px;
+    }
+}
+
+/* Ultra-small devices: 350px & below */
+@media (max-width: 350px) {
+    .school-name {
+        font-size: 0.8rem;
+    }
+
+    .school-logo {
+        width: 38px;
+        height: 38px;
+    }
+}
+@media (max-width: 340px) {
+    .school-name {
+        display: none;
+    }
+}
+.school-card,
+.card-body,
+.row {
+    overflow: visible !important;
+}
+@media (max-width: 576px) {
+    .school-card {
+        margin-bottom: 24px;
+    }
+}
+
 
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow p-0">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container-fluid">
 
-        <!-- Logo + School Name -->
-        <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+        <a class="navbar-brand d-flex align-items-center school-brand" href="#">
+            <img src="public/uploads/WhatsApp Image 2025-12-12 at 5.51.50 PM.jpeg"
+                 alt="LR School Logo"
+                 class="school-logo me-2 rounded-circle border border-light">
+            <span class="school-name">L. R. Convent School, 9 ML</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto text-center">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
+                <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow p-0">
+    <div class="container-fluid">
+
+        
+        <a class="navbar-brand d-flex align-items-center fw-semibold" href="#">
             <img src="public/uploads/WhatsApp Image 2025-12-12 at 5.51.50 PM.jpeg"
                  alt="LR School Logo"
                  width="70"
@@ -94,13 +186,15 @@
                  class="me-2 rounded-circle border border-light">
             <span class="fs-5">L. R. Convent School, 9 ML</span>
         </a>
+ 
 
-        <!-- Mobile Toggle -->
+
+       
         <button class="navbar-toggler border-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Menu -->
+      
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
@@ -131,7 +225,7 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->
 
 
 
@@ -172,14 +266,6 @@
             </div>
         </div>
 
-        <!-- Slide 3 -->
-        <!-- <div class="carousel-item">
-            <img src="public/uploads/banner_logo.png" class="d-block w-100 hero-img" alt="Students Activity">
-            <div class="carousel-caption text-end">
-                <h2 class="fw-bold">Holistic Development</h2>
-                <p>Learning beyond classrooms</p>
-            </div>
-        </div> -->
         <div class="carousel-item">
     <img src="public/uploads/banner_logo.png" class="d-block w-100 hero-img" alt="Students Activity">
     <div class="carousel-caption text-end">
@@ -250,182 +336,123 @@ academically, morally, and socially, becoming confident citizens of tomorrow.
     <h2 class="section-title text-center text-primary fw-bold mb-4">Academics</h2>
 
     <div class="row g-4">
-      <!-- Primary Wing -->
-      <!-- <div class="col-md-3">
-        <div class="card h-100 shadow-sm border-0 rounded-4 text-center">
-          <div class="card-body">
-            <h5 class="card-title text-primary">Pre primary Wing</h5>
-            <p class="small text-muted">Strong foundation learning</p>
 
-            <select class="form-select mt-3">
-              <option selected>Classes Offered</option>
-              <option>Nursery – ₹16,000 / Year</option>
-              <option>LKG – ₹17,000 / Year</option>
-              <option>UKG – ₹18,000 / Year</option>
-            </select>
-          </div>
-        </div>
-      </div> -->
-<div class="col-md-3">
-  <div class="card h-100 shadow-sm border-0 rounded-4 text-center school-card">
-    <div class="card-body p-4">
-
-      <h5 class="card-title text-primary fw-bold">
-        Pre-Primary Wing
-      </h5>
-
-      <p class="text-muted small mb-3">
-        Building a strong foundation through joyful learning
-      </p>
-
-      <!-- Fake Dropdown -->
-      <div class="dropdown fee-dropdown">
-        <button class="btn btn-light w-100 dropdown-toggle text-start"
-                type="button" data-bs-toggle="dropdown">
-          Fee Structure (Academic Year)
-        </button>
-
-        <ul class="dropdown-menu w-100 mt-2 fee-dropdown">
-  <li class="dropdown-item d-flex justify-content-between">
-    <span>Nursery</span>
-    <span class="fw-semibold">₹16,000 / Year</span>
-  </li>
-  <li class="dropdown-item d-flex justify-content-between">
-    <span>LKG</span>
-    <span class="fw-semibold">₹17,000 / Year</span>
-  </li>
-  <li class="dropdown-item d-flex justify-content-between">
-    <span>UKG</span>
-    <span class="fw-semibold">₹18,000 / Year</span>
-  </li>
-</ul>
-
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-
-      <!-- Middle Wing -->
-      <!-- <div class="col-md-3">
-        <div class="card h-100 shadow-sm border-0 rounded-4 text-center">
-          <div class="card-body">
-            <h5 class="card-title text-primary">Primary Wing</h5>
-            <p class="small text-muted">Skill-based subjects</p>
-
-            <select class="form-select mt-3">
-              <option selected>Classes Offered</option>
-              <option>Class 1st – ₹19,000 / Year</option>
-              <option>Class 2nd – ₹20,000 / Year</option>
-              <option>Class 3rd – ₹21,000 / Year</option>
-              <option>Class 4th – ₹22,000 / Year</option>
-              <option>Class 5th – ₹23,000 / Year</option>
-            </select>
-          </div>
-        </div>
-      </div> -->
       <div class="col-md-3">
-  <div class="card h-100 shadow-sm border-0 rounded-4 text-center school-card">
-    <div class="card-body p-4">
+        <div class="card h-100 shadow-sm border-0 rounded-4 text-center school-card">
+          <div class="card-body p-4">
+            <h5 class="card-title text-primary fw-bold"> Pre-Primary Wing</h5>
+            <p class="text-muted small mb-3">Building a strong foundation through joyful learning</p>
 
-      <h5 class="card-title text-primary fw-bold">
-        Primary Wing
-      </h5>
+            <div class="dropdown fee-dropdown">
+              <button class="btn btn-light w-100 dropdown-toggle text-start"
+        type="button"
+        data-bs-toggle="dropdown"
+        data-bs-display="static">
 
-      <p class="text-muted small mb-3">
-        Skill-based subjects
-      </p>
+                    Fee Structure (Academic Year)
+              </button>
 
-      <!-- Fake Dropdown -->
-      <div class="dropdown fee-dropdown">
-        <button class="btn btn-light w-100 dropdown-toggle text-start"
-                type="button" data-bs-toggle="dropdown">
-          Fee Structure (Academic Year)
-        </button>
-
-        <ul class="dropdown-menu w-100 mt-2 fee-dropdown">
-  <li class="dropdown-item d-flex justify-content-between">
-    <span>Class 1st</span>
-    <span class="fw-semibold">₹19,000 / Year</span>
-  </li>
-  <li class="dropdown-item d-flex justify-content-between">
-    <span>Class 2nd</span>
-    <span class="fw-semibold">₹20,000 / Year</span>
-  </li>
-  <li class="dropdown-item d-flex justify-content-between">
-    <span>Class 3rd</span>
-    <span class="fw-semibold">₹21,000 / Year</span>
-  </li>
-    <li class="dropdown-item d-flex justify-content-between">
-    <span>Class 4th</span>
-    <span class="fw-semibold">₹22,000 / Year</span>
-  </li>
-    <li class="dropdown-item d-flex justify-content-between">
-    <span>Class 5th</span>
-    <span class="fw-semibold">₹23,000 / Year</span>
-  </li>
-</ul>
-
+              <ul class="dropdown-menu w-100 mt-2 fee-dropdown">
+                <li class="dropdown-item d-flex justify-content-between">
+                  <span>Nursery</span>
+                  <span class="fw-semibold">₹16,000 / Year</span>
+                </li>
+                <li class="dropdown-item d-flex justify-content-between">
+                  <span>LKG</span>
+                  <span class="fw-semibold">₹17,000 / Year</span>
+                </li>
+                <li class="dropdown-item d-flex justify-content-between">
+                  <span>UKG</span>
+                  <span class="fw-semibold">₹18,000 / Year</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
-    </div>
-  </div>
-</div>
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0 rounded-4 text-center school-card">
+          <div class="card-body p-4">
+            <h5 class="card-title text-primary fw-bold">Primary Wing</h5>
+            <p class="text-muted small mb-3">Skill-based subjects</p>
 
-      <!-- Senior Wing -->
+            <div class="dropdown fee-dropdown">
+              <button class="btn btn-light w-100 dropdown-toggle text-start"
+        type="button"
+        data-bs-toggle="dropdown"
+        data-bs-display="static">
 
-
-           <div class="col-md-3">
-  <div class="card h-100 shadow-sm border-0 rounded-4 text-center school-card">
-    <div class="card-body p-4">
-
-      <h5 class="card-title text-primary fw-bold">
-        Secondary Wing
-      </h5>
-
-      <p class="text-muted small mb-3">
-        Exam & career preparation
-      </p>
-
-      <!-- Fake Dropdown -->
-      <div class="dropdown fee-dropdown">
-        <button class="btn btn-light w-100 dropdown-toggle text-start"
-                type="button" data-bs-toggle="dropdown">
-          Fee Structure (Academic Year)
-        </button>
-
-        <ul class="dropdown-menu w-100 mt-2 fee-dropdown">
-  <li class="dropdown-item d-flex justify-content-between">
-    <span>Class 6th</span>
-    <span class="fw-semibold">₹24,000 / Year</span>
-  </li>
-  <li class="dropdown-item d-flex justify-content-between">
-    <span>Class 7th</span>
-    <span class="fw-semibold">₹25,000 / Year</span>
-  </li>
-  <li class="dropdown-item d-flex justify-content-between">
-    <span>Class 8th</span>
-    <span class="fw-semibold">₹26,000 / Year</span>
-  </li>
-    <li class="dropdown-item d-flex justify-content-between">
-    <span>Class 9th</span>
-    <span class="fw-semibold">₹27,000 / Year</span>
-  </li>
-    <li class="dropdown-item d-flex justify-content-between">
-    <span>Class 10th</span>
-    <span class="fw-semibold">₹29,000 / Year</span>
-  </li>
-</ul>
-
+                  Fee Structure (Academic Year)
+              </button>
+              <ul class="dropdown-menu w-100 mt-2 fee-dropdown">
+                  <li class="dropdown-item d-flex justify-content-between">
+                      <span>Class 1st</span>
+                      <span class="fw-semibold">₹19,000 / Year</span>
+                  </li>
+                  <li class="dropdown-item d-flex justify-content-between">
+                      <span>Class 2nd</span>
+                      <span class="fw-semibold">₹20,000 / Year</span>
+                  </li>
+                  <li class="dropdown-item d-flex justify-content-between">
+                      <span>Class 3rd</span>
+                      <span class="fw-semibold">₹21,000 / Year</span>
+                  </li>
+                  <li class="dropdown-item d-flex justify-content-between">
+                      <span>Class 4th</span>
+                      <span class="fw-semibold">₹22,000 / Year</span>
+                  </li>
+                  <li class="dropdown-item d-flex justify-content-between">
+                      <span>Class 5th</span>
+                      <span class="fw-semibold">₹23,000 / Year</span>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
-    </div>
-  </div>
-</div>
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm border-0 rounded-4 text-center school-card">
+          <div class="card-body p-4">
+            <h5 class="card-title text-primary fw-bold">Secondary Wing</h5>
+            <p class="text-muted small mb-3">Exam & career preparation</p>
+            <div class="dropdown fee-dropdown">
+              <button class="btn btn-light w-100 dropdown-toggle text-start"
+        type="button"
+        data-bs-toggle="dropdown"
+        data-bs-display="static">
 
-      <!-- Co-curricular -->
+                  Fee Structure (Academic Year)
+              </button>
+
+              <ul class="dropdown-menu w-100 mt-2 fee-dropdown">
+                <li class="dropdown-item d-flex justify-content-between">
+                  <span>Class 6th</span>
+                  <span class="fw-semibold">₹24,000 / Year</span>
+                </li>
+                <li class="dropdown-item d-flex justify-content-between">
+                  <span>Class 7th</span>
+                  <span class="fw-semibold">₹25,000 / Year</span>
+                </li>
+                <li class="dropdown-item d-flex justify-content-between">
+                  <span>Class 8th</span>
+                  <span class="fw-semibold">₹26,000 / Year</span>
+                </li>
+                <li class="dropdown-item d-flex justify-content-between">
+                  <span>Class 9th</span>
+                  <span class="fw-semibold">₹27,000 / Year</span>
+                </li>
+                <li class="dropdown-item d-flex justify-content-between">
+                  <span>Class 10th</span>
+                  <span class="fw-semibold">₹29,000 / Year</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="col-md-3">
         <div class="card h-100 shadow-sm border-0 rounded-4 text-center bg-primary text-white">
           <div class="card-body">
@@ -648,7 +675,7 @@ academically, morally, and socially, becoming confident citizens of tomorrow.
 
 <!-- Footer -->
 <footer class="bg-primary text-white text-center py-3">
-    © 2025 L. R. Convent School, 9 ML — All Rights Reserved
+    © 2026 L. R. Convent School, 9 ML — All Rights Reserved
 </footer>
 
 <!-- Bootstrap JS -->
